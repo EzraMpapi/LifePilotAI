@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "icon": "./assets/icon.png",
+    "android": {
+      "package": "com.lifepilot_3d95.runable",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0E2747"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM",
+        "USE_EXACT_ALARM",
+        "VIBRATE",
+        "WAKE_LOCK"
+      ]
+    },
+    "extra": {
+      "apiUrl": "https://lifepil-44r1jo6-preview-4200.runable.site/",
+      "applicationId": "lifepil-44r1jo6"
+    },
+    "ios": {
+      "bundleIdentifier": "com.lifepilot_3d95.runable",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "LifePilot uses your location to build your travel timeline and places history.",
+        "NSCameraUsageDescription": "LifePilot uses the camera to scan receipts and documents.",
+        "NSPhotoLibraryUsageDescription": "LifePilot accesses your photos to set a profile picture and scan receipts."
+      }
+    },
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B1F38"
+    },
+    "name": "LifePilot AI",
+    "slug": "lifepilot",
+    "version": "1.0.0",
+    "scheme": "lifepilot",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "LifePilot uses your location to build your travel timeline and places history."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#6C5CE7"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "LifePilot accesses your photos to set a profile picture and scan receipts.",
+          "cameraPermission": "LifePilot uses the camera to scan receipts and documents."
+        }
+      ],
+      "expo-secure-store",
+      "expo-updates",
+      "expo-localization"
+    ]
+  }
+}
